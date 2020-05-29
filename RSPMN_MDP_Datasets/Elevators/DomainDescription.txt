@@ -1,0 +1,39 @@
+﻿Domain Description:
+
+////////////////////////////////////////////////////////////////////
+// Elevator Domain
+//
+// The "elevators" domain has a number of elevators delivering passengers 
+// to either the top or the bottom floor (the only allowable destinations).
+// Potential passengers arrive at a floor based on Bernoulli draws 
+// with a potentially different arrival probability for each floor.  
+//
+// The elevator can move in its current direction if the doors are closed,
+// can remain stationary (noop), or can open its door while indicating
+// the direction that it will go in next (this allows potential passengers
+// to determine whether to board or not).  Note that the elevator can only
+// change direction by opening its door while indicating the opposite 
+// direction. 
+//
+// A passable plan in this domain is to pick up a passenger every time 
+// they appear and take them to their destination.  A better plan includes 
+// having the elevator "hover" near floors where passengers are likely to 
+// arrive and coordinating multiple elevators for up and down passengers.
+//
+// This domain was designed to support extension to multiple elevators
+// and may be used in either single or multi-elevator mode.
+////////////////////////////////////////////////////////////////////
+
+General reference:
+    Author: Tom Walsh (thomasjwalsh [at] gmail.com)
+
+Implementation Reference:
+    Scott Sanner (2010). Relational Dynamic Influence Diagram Language (RDDL): 
+    Language Description.
+    http://users.cecs.anu.edu.au/~ssanner/IPPC_2011/RDDL.pdf
+
+Github: https://github.com/ssanner/rddlsim/tree/master/files/final_comp/rddl
+
+
+
+

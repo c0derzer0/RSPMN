@@ -1,0 +1,14 @@
+﻿Domain Description at:
+
+https://gym.openai.com/envs/FrozenLake-v0/
+
+Reference:
+    "Greg Brockman and Vicki Cheung and 
+    Ludwig Pettersson and Jonas Schneider and John Schulman 
+    and Jie Tang and Wojciech Zaremba. (2016). OpenAI Gym. arXiv:1606.01540"
+  
+
+
+
+
+

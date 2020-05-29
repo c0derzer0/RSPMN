@@ -1,0 +1,32 @@
+﻿Partial Order =
+[
+    [
+    states_burning_x1y1, states_burning_x1y2, states_burning_x1y3,
+    states_burning_x2y1, states_burning_x2y2, states_burning_x2y3,
+    states_burning_x3y1, states_burning_x3y2, states_burning_x3y3,
+    states_out_of_fuel_x1y1, states_out_of_fuel_x1y2, states_out_of_fuel_x1y3,
+    states_out_of_fuel_x2y1, states_out_of_fuel_x2y2, states_out_of_fuel_x2y3,
+    states_out_of_fuel_x3y1, states_out_of_fuel_x3y2, states_out_of_fuel_x3y3
+    ],
+    [action_put_out_x1y1], [action_put_out_x1y2], [action_put_out_x1y3],
+    [action_put_out_x2y1], [action_put_out_x2y2], [action_put_out_x2y3],
+    [action_put_out_x3y1], [action_put_out_x3y2], [action_put_out_x3y3],
+    [action_cut_out_x1y1], [action_cut_out_x1y2], [action_cut_out_x1y3],
+    [action_cut_out_x2y1], [action_cut_out_x2y2], [action_cut_out_x2y3],
+    [action_cut_out_x3y1], [action_cut_out_x3y2], [action_cut_out_x3y3],
+    [reward]
+]
+Meu:
+Value = VI throws oom error
+Calculated as average reward over 10000 episodes
+
+
+Commands to reproduce MEU in rddlsim
+Initialize Server:
+./run rddl.competition.server files/final_comp_2014/rddl/ 2323 10000
+Run Client with VI policy iteration:
+./run rddl.competition.Client files/final_comp_2014/rddl localhost MyClientName rddl.solver.mdp.vi.VI 2323 123456 wildfire_inst_mdp__1
+
+For detailed information on usage and examples, refer:
+https://github.com/ssanner/rddlsim/blob/master/INSTALL.txt
+

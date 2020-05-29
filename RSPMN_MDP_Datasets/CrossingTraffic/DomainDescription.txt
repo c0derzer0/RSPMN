@@ -1,0 +1,44 @@
+﻿Domain Description:
+
+////////////////////////////////////////////////////////////////////
+//
+// Crossing Traffic Robot Navigation
+//
+// In a grid, a robot (R) must get to a goal (G) and avoid obstacles (O)
+// arriving randomly and moving left.  If an obstacle overlaps with the
+// robot, the robot disappears and can no longer move around.  The robot
+// can "duck" underneath a car by deliberately moving right/east when
+// a car is to the right of it (this can make the solution interesting...
+// the robot should start at the left side of the screen then).  The robot
+// receives -1 for every time step it has not reached the goal.  The goal
+// state is absorbing with 0 reward.
+//
+// ****************
+// *            R * 
+// *  <-O <-O <-O *
+// *    <-O   <-O *
+// * <-O    <-O   *
+// *     <-O  <-O *
+// *            G *
+// ****************
+//
+// You can think of this as the RDDL version of Frogger:
+//
+//   http://en.wikipedia.org/wiki/Frogger
+//
+////////////////////////////////////////////////////////////////////
+
+
+General reference:
+    Author: Sungwook Yoon (sungwook.yoon [at] gmail.com)
+
+Implementation Reference:
+    Scott Sanner (2010). Relational Dynamic Influence Diagram Language (RDDL): 
+    Language Description.
+    http://users.cecs.anu.edu.au/~ssanner/IPPC_2011/RDDL.pdf
+
+Github: https://github.com/ssanner/rddlsim/tree/master/files/final_comp/rddl
+
+
+
+
