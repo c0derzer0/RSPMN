@@ -16,7 +16,7 @@ Calculate Average reward
 
 Dataset:
 Horizon: 15, 50
-Instances: 100000, 15000
+Instances: 20000
 Policy used to generate data: Random action with probability 0.7 and
 			      action from optimally trained DQN with 
                               proability 0.3

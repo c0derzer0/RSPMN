@@ -4,7 +4,7 @@
 //////////////////////////////////////////////////////////////////////
 
 MEU:
-Value = 0.432216
+Value = 0.8
 Calculated as max qvalue at start state using an optimally trained DQN
 
 Commands to reproduce MEU:
