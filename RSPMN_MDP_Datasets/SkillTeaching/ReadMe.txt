@@ -11,6 +11,10 @@
     [action_giveHint_s0],[action_giveHint_s1], [action_askProb_s0], [action_askProb_s1]
     [reward]
 ]
+
+Decision nodes = ["action_giveHint_s0"],["action_giveHint_s1"], ["action_askProb_s0"], ["action_askProb_s1"]
+Utility node = ["reward"]
+meta_types = [MetaType.DISCRETE]*16+[MetaType.UTILITY]
 /////////////////////////////////////////////////////////////////////
 
 MEU:
