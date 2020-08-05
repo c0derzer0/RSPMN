@@ -1,5 +1,8 @@
 ﻿Partial Order = 
 [[state],[action],[reward]]
+Decision nodes = ["action"]
+Utility nodes = ["reward"]
+meta_types = [MetaType.DISCRETE]*2+[MetaType.UTILITY]
 
 //////////////////////////////////////////////////////////////////////
 
