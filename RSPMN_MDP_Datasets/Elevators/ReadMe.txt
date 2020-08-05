@@ -14,7 +14,7 @@ Partial Order =
 ]
 
 Decision nodes = ["action_close_door", "action_move_current_dir", "action_open_door_going_up", "action_open_door_going_down"]
-Utility node = ["reward"]
+Utility nodes = ["reward"]
 meta_types = [MetaType.DISCRETE]*17+[MetaType.UTILITY]
 /////////////////////////////////////////////////////////////////////
 
