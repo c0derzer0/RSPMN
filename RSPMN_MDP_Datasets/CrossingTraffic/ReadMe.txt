@@ -12,7 +12,9 @@
     [action_move_west],
     [reward]
 ]
-
+Decision nodes = ["action_move_east", "action_move_north", "action_move_south", "action_move_west"]
+Utility nodes = ["reward"]
+meta_types = [MetaType.DISCRETE]*22+[MetaType.UTILITY]
 /////////////////////////////////////////////////////////////////////
 
 MEU:
