@@ -12,6 +12,10 @@ Partial Order =
     [action_close_door],[action_move_current_dir], [action_open_door_going_up], [action_open_door_going_down]
     [reward]
 ]
+
+Decision nodes = ["action_close_door", "action_move_current_dir", "action_open_door_going_up", "action_open_door_going_down"]
+Utility node = ["reward"]
+meta_types = [MetaType.DISCRETE]*17+[MetaType.UTILITY]
 /////////////////////////////////////////////////////////////////////
 
 MEU:
