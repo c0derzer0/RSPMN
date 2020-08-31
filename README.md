@@ -116,6 +116,6 @@ for i in range(num_steps):
 # Compute mean reward for the last 100 episodes
 mean_100ep_reward = round(np.mean(episode_rewards[-100:]), 1)
 # print("Mean reward:", mean_100ep_reward, "Num episodes:", len(episode_rewards))
-  
+```  
 ## Papers implemented
 Tatavarti, Hari Teja, Prashant Doshi, and Layton Hayes. "Recurrent Sum-Product-Max Networks for Decision Making in Perfectly-Observed Environments." arXiv preprint arXiv:2006.07300 (2020).
