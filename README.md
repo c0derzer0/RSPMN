@@ -7,7 +7,7 @@ which generalise Sum-Product-Max Networks(**SPN**) for the class of sequential d
 
 Use the *rspmn1* branch from forked version of SPFlow [https://github.com/c0derzer0/SPFlow] for installation.
 
-## Using SPMN Module
+## Using RSPMN Module
 
 #### Sample Dataset
 Look at *RSPMN/RSPMN_MDP_Datasets/* folder for a list of sample datasets to use with RSPMN structure learning algorithm. 
