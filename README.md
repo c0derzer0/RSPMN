@@ -79,6 +79,7 @@ test_data = np.array(test_data).reshape(1, len(test_data))
 # rspmn.select_actions returns a numpy array of data filled with best decision values at corresponding decision variables
 # and most probable explaination (MPE) values for leaf variables
 data = rspmn.select_actions(rspmn.template, test_data, meu_list, lls_list)
+# data is represented as [state, action, utility]
 action = data[1]
 # print(action)
 
@@ -94,10 +95,27 @@ The output for meu
 0.818
 ```
 #### Additional functionality
-We can interact with the environment by using 
+We can also interact with the environment by using actions generated from RSPMN
 ```python
-data = rspmn.select_actions(rspmn.template, test_data, meu_list, lls_list)
-action = data[1]
-```
+import gym
+env = gym.make('FrozenLake-v0')
+episode_rewards = [0.0]
+obs = env.reset()
+for i in range(num_steps):
+  test_data = [obs, np.nan, np.nan]
+  data = rspmn.select_actions(rspmn.template, test_data, meu_list, lls_list)
+  # data is represented as [state, action, utility]
+  action = data[1]
+  obs, reward, done, info = env.step(action)
+  
+  # Stats
+  episode_rewards[-1] += reward
+  if done:
+      obs = env.reset()
+      episode_rewards.append(0.0)
+# Compute mean reward for the last 100 episodes
+mean_100ep_reward = round(np.mean(episode_rewards[-100:]), 1)
+# print("Mean reward:", mean_100ep_reward, "Num episodes:", len(episode_rewards))
+  
 ## Papers implemented
 Tatavarti, Hari Teja, Prashant Doshi, and Layton Hayes. "Recurrent Sum-Product-Max Networks for Decision Making in Perfectly-Observed Environments." arXiv preprint arXiv:2006.07300 (2020).
