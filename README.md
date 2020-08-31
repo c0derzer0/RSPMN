@@ -82,7 +82,7 @@ data = rspmn.select_actions(rspmn.template, test_data, meu_list, lls_list)
 action = data[1]
 # print(action)
 
-# to obtain the best action at state 0
+# to obtain the Maximum Expected Utility of state 0
 test_data = [0, np.nan, np.nan]
 test_data = np.array(test_data).reshape(1, len(test_data))
 meu = rspmn.meu_of_state(rspmn.template, test_data, meu_list, lls_list)[0][:,0]
