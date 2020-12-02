@@ -46,8 +46,14 @@ spmn_structure_two_time_steps, top_network, initial_template_network = rspmn.Ini
 ```python
 
 template = rspmn.InitialTemplate.template_network
+
+# use one of the follwoing ways to update the template
+
 # Learn final template using sequential data
 template = rspmn.hard_em(train_data, template, False)
+
+# or 
+
 # if numpy array cannot hold whole of train_data, 
 # updates can be made on batches of data and/or by splliting sequence as follows
 for i in range(0, len(train_data), batch_size):
@@ -62,7 +68,7 @@ rspmn.update_weights(rspmn.template)
 #### We can plot the learned structures 
 ```python
 from spn.io.Graphics import plot_spn
-plot_spn(spmn_structure_two_time_steps, "folder/file_name.pdf", feature_labels=["State", "Action", "Reward"])
+plot_spn(spmn_structure_two_time_steps, "folder/file_name.pdf", feature_labels=["State0", "Action0", "Reward0", "State1", "Action1", "Reward1"])
 plot_spn(top_layer, "folder/file_name.pdf", feature_labels=["State", "Action", "Reward"])
 plot_spn(initial_template_network, "folder/file_name.pdf", feature_labels=["State", "Action", "Reward"])
 
