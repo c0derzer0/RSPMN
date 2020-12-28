@@ -55,7 +55,7 @@ template = rspmn.hard_em(train_data, template, False)
 # or 
 
 # if numpy array cannot hold whole of train_data, 
-# updates can be made on batches of data and/or by splliting sequence as follows
+# updates can be made on batches of data and/or by splitting sequence as follows
 for i in range(0, len(train_data), batch_size):
     print(i)
     for j in range(0, len(sequence)-1, sequence_split): # e.g. len(sequence) = 10, sequence_split = 5
