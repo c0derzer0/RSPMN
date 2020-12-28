@@ -24,8 +24,8 @@ Provide *partial order, decision nodes, utility node, feature_names, meta_types*
 ```python
 Partial Order = 
 [[state],[action],[reward]]
-Decision nodes = ["action"]
-Utility nodes = ["reward"]
+decision_nodes = ["action"]
+utility_nodes = ["reward"]
 feature_names = [var for var_set in partial_order for var in var_set]
 
 from spn.structure.StatisticalTypes import MetaType
